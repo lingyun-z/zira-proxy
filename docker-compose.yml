@@ -1,0 +1,11 @@
+version: "0"
+services:
+  zira-proxy:
+    restart: always
+    image: zira-proxy
+    container_name: zira-proxy
+    networks:
+      - zira-front
+      - zira-back
+    ports:
+      - "80:80"
