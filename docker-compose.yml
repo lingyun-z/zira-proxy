@@ -1,4 +1,4 @@
-version: "0"
+version: "2"
 services:
   zira-proxy:
     restart: always
@@ -6,3 +6,11 @@ services:
     container_name: zira-proxy
     ports:
       - "80:80"
+    networks:
+      - front
+      - back
+networks:
+  front:
+    driver: bridge
+  back:
+    driver: bridge
