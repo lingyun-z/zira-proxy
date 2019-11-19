@@ -14,7 +14,8 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh "bash deploy.sh"
+        sh "docker network create zira -d bridge"
+        sh "docker-compose up -d"
       }
     }
   }

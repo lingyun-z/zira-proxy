@@ -7,10 +7,8 @@ services:
     ports:
       - "80:80"
     networks:
-      - front
-      - back
+      - zira
 networks:
-  front:
-    driver: bridge
-  back:
-    driver: bridge
+  zira:
+    external:
+      name: zira
